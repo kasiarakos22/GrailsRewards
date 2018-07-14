@@ -1,6 +1,6 @@
 package rewards
 
 class AwardController {
-    static scaffold = OrderItem
+    static scaffold = Award
    // def index() { }
 }
