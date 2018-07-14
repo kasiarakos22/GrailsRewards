@@ -3,7 +3,7 @@ package rewards
 import grails.testing.gorm.DomainUnitTest
 import spock.lang.Specification
 
-class AwardsSpec extends Specification implements DomainUnitTest<Awards> {
+class AwardSpec extends Specification implements DomainUnitTest<Award> {
 
     def setup() {
     }
