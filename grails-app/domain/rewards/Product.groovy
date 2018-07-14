@@ -1,3 +1,5 @@
+package rewards
+
 class Product {
 
     String name;
