@@ -90,4 +90,20 @@ class CustomerController {
         customer.delete()
         redirect(action: "index")
     }
+
+    def customerLookup(Customer lookupInstance){
+        def (customer, welcomeMessage) = calculationsService.processCheckIn(lookupInstance)
+        render (view: "checkin", model: [customer: customer, welcomeMessage: welcomeMessage])
+    }
+
+    def profile(){
+        def customerInstance = Customer.findByPhone(params.id)
+        render(view: "profile", model: [customerInstance: customerInstance])
+    }
+
+    def updateProfile(Customer customer){
+        customer.save()
+        render(view: "profile", model: [customerInstance: customer])
+    }
+
 }
